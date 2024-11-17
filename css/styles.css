@@ -6,6 +6,9 @@
     --text-color: #333333;       /* Dark Gray */
     --light-gray: #f5f5f5;       /* Light Gray Background */
     --white: #ffffff;
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --gradient-dark: linear-gradient(135deg, #001830, var(--primary-color));
+    --gradient-accent: linear-gradient(135deg, var(--accent-color), #ffed4a);
 }
 
 /* Base Styles */
@@ -15,6 +18,18 @@ body {
     padding: 0;
     line-height: 1.6;
     color: var(--text-color);
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .container {
@@ -62,18 +77,57 @@ nav a {
     color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
+    position: relative;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--gradient-dark);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
     color: var(--white);
     padding: 120px 0 80px;
     margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,215,0,0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero h1 {
@@ -90,20 +144,39 @@ nav a:hover {
 
 /* Buttons */
 .button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: var(--accent-color);
+    background: var(--gradient-accent);
+    background-size: 200% 200%;
     color: var(--primary-color);
-    text-decoration: none;
+    border: none;
+    padding: 12px 30px;
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: 2px solid var(--accent-color);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
 }
 
 .button:hover {
-    background-color: transparent;
-    color: var(--accent-color);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.button:hover::before {
+    opacity: 1;
 }
 
 /* Cards */
@@ -115,15 +188,34 @@ nav a:hover {
 }
 
 .card {
-    background: var(--white);
+    background: linear-gradient(145deg, var(--white), #f5f5f5);
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,215,0,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.card:hover::before {
+    opacity: 1;
 }
 
 .card h3 {
@@ -133,8 +225,10 @@ nav a:hover {
 
 /* Sections */
 .capabilities, .why-choose, .solution-details, .about-content {
+    background: linear-gradient(135deg, var(--light-gray), #ffffff);
+    position: relative;
+    overflow: hidden;
     padding: 80px 0;
-    background-color: var(--light-gray);
 }
 
 section h2 {
@@ -194,7 +288,9 @@ textarea {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background: var(--gradient-dark);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
     color: var(--white);
     padding: 60px 0 30px;
 }
@@ -288,4 +384,19 @@ footer {
     .card {
         margin-bottom: 20px;
     }
+}
+
+/* Add smooth scrolling for better transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add loading animation for images */
+img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.loaded {
+    opacity: 1;
 }
