@@ -93,10 +93,6 @@ nav a:hover::after {
     margin-top: 60px;
     position: relative;
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
 }
 
 .hero::before {
@@ -432,4 +428,23 @@ footer {
 /* Add smooth scrolling for better transitions */
 html {
     scroll-behavior: smooth;
+}
+
+/* Add hero-content grid container */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Update media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
 }
