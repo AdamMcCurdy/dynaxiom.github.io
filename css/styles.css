@@ -448,3 +448,31 @@ html {
         order: -1;
     }
 }
+
+/* Add CTA specific styles */
+.cta {
+    background: var(--gradient-dark);
+    background-size: 200% 200%;
+    animation: gradientMove 15s ease infinite;
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.cta-content p {
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    margin-top: 30px;
+}
