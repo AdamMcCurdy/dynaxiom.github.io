@@ -556,9 +556,10 @@ html {
 }
 
 .leader-credentials {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-size: 0.9em;
     margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .leader-bio {
