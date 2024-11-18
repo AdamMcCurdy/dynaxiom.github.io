@@ -151,13 +151,13 @@
 
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+            event.preventDefault(); // Prevent default form submission
             
             // Show loading state
             document.getElementById('submitText').classList.add('hidden');
             document.getElementById('loadingText').classList.remove('hidden');
             
-            // Create the template parameters
+            // Collect form data
             const templateParams = {
                 from_name: document.getElementById('name').value,
                 from_email: document.getElementById('email').value,
@@ -165,21 +165,19 @@
                 message: document.getElementById('message').value
             };
 
-            // Use send instead of sendForm and pass the templateParams
-            emailjs.send('service_bp1y0mp', 'template_pdq9r96', templateParams)
+            // Send email using EmailJS
+            emailjs.send('your_service_id', 'your_template_id', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     // Show success message
                     document.getElementById('submitMessage').classList.remove('hidden');
                     document.getElementById('contactForm').reset();
-                    
                     // Reset button state
                     document.getElementById('loadingText').classList.add('hidden');
                     document.getElementById('submitText').classList.remove('hidden');
                 }, function(error) {
                     console.log('FAILED...', error);
                     alert('Sorry, there was an error sending your message. Please try again later.');
-                    
                     // Reset button state
                     document.getElementById('loadingText').classList.add('hidden');
                     document.getElementById('submitText').classList.remove('hidden');
