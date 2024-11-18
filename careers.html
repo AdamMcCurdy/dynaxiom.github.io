@@ -4,59 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers - Dynaxiom</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div>
-                <strong><a href="index.html">Dynaxiom</a></strong>
+<body class="bg-gray-50">
+    <header class="fixed w-full top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary-800">
+                    <a href="index.html">Dynaxiom</a>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="solutions.html" class="text-primary-700 hover:text-primary-900 transition-colors">Solutions</a></li>
+                    <li><a href="about.html" class="text-primary-700 hover:text-primary-900 transition-colors">About</a></li>
+                    <li><a href="careers.html" class="text-primary-700 hover:text-primary-900 transition-colors">Careers</a></li>
+                    <li><a href="contact.html" class="text-primary-700 hover:text-primary-900 transition-colors">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Join Our Team</h1>
-                <p>Build your career with a leader in mission-critical technology</p>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-900 to-primary-700 text-white">
+            <div class="container mx-auto px-6 py-20">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Join Our Team</h1>
+                <p class="text-xl text-gray-100">Build your career with a leader in mission-critical technology</p>
             </div>
         </section>
 
-        <section class="container" style="padding: 60px 0;">
-            <h2>Current Openings</h2>
-            
-            <div class="job-listing">
-                <h3>Senior Software Engineer</h3>
-                <p>Location: Washington, DC</p>
-                <p>We're seeking experienced software engineers to join our development team...</p>
-                <a href="contact.html" class="button">Apply Now</a>
-            </div>
+        <!-- Job Listings -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-primary-800 text-center mb-12">Current Openings</h2>
+                
+                <div class="space-y-8">
+                    <!-- Senior Software Engineer -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-primary-800 mb-4">Senior Software Engineer</h3>
+                            <p class="text-gray-600 mb-4">Location: Washington, DC</p>
+                            <p class="text-gray-700 mb-6">We're seeking experienced software engineers to join our development team...</p>
+                            <a href="contact.html" class="inline-block bg-accent-500 text-white px-6 py-2 rounded-lg hover:bg-accent-600 transition-colors shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
 
-            <div class="job-listing">
-                <h3>UAS Systems Specialist</h3>
-                <p>Location: Arlington, VA</p>
-                <p>Looking for UAS specialists with experience in platform integration...</p>
-                <a href="contact.html" class="button">Apply Now</a>
-            </div>
+                    <!-- UAS Systems Specialist -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-primary-800 mb-4">UAS Systems Specialist</h3>
+                            <p class="text-gray-600 mb-4">Location: Arlington, VA</p>
+                            <p class="text-gray-700 mb-6">Looking for UAS specialists with experience in platform integration...</p>
+                            <a href="contact.html" class="inline-block bg-accent-500 text-white px-6 py-2 rounded-lg hover:bg-accent-600 transition-colors shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
 
-            <div class="job-listing">
-                <h3>Project Manager</h3>
-                <p>Location: Remote</p>
-                <p>Seeking experienced project managers for government contract work...</p>
-                <a href="contact.html" class="button">Apply Now</a>
+                    <!-- Project Manager -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-primary-800 mb-4">Project Manager</h3>
+                            <p class="text-gray-600 mb-4">Location: Remote</p>
+                            <p class="text-gray-700 mb-6">Seeking experienced project managers for government contract work...</p>
+                            <a href="contact.html" class="inline-block bg-accent-500 text-white px-6 py-2 rounded-lg hover:bg-accent-600 transition-colors shadow-md">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <!-- Copy footer from index.html -->
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-900 to-primary-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Dynaxiom</h3>
+                    <p class="text-gray-300">Delivering mission-critical solutions for government and defense organizations.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html" class="text-gray-300 hover:text-accent-400 transition-colors">Solutions</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-400 transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-accent-400 transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Contact Us</h3>
+                    <p class="text-gray-300">1234 Government St</p>
+                    <p class="text-gray-300">Washington, DC 20006</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                    <p class="text-gray-300">Email: info@dynaxiom.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                &copy; 2024 Dynaxiom. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
 </html> 

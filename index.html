@@ -3,128 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynaxiom - Mission-Critical Software Solutions and UAS Technologies</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Dynaxiom - Mission-Critical Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#0071bc',
+                            darker: '#205493',
+                            darkest: '#112e51',
+                        },
+                        base: '#212121',
+                        gray: {
+                            DEFAULT: '#5b616b',
+                            dark: '#323a45',
+                            light: '#aeb0b5',
+                            lighter: '#d6d7d9',
+                            lightest: '#f1f1f1',
+                        },
+                        secondary: {
+                            DEFAULT: '#e31c3d',
+                            dark: '#cd2026',
+                            darkest: '#981b1e',
+                        },
+                        cool: {
+                            DEFAULT: '#205493',
+                            light: '#4773aa',
+                            lighter: '#8ba6ca',
+                            lightest: '#dce4ef',
+                        },
+                        gold: {
+                            DEFAULT: '#fdb81e',
+                            light: '#f9c642',
+                            lighter: '#fad980',
+                            lightest: '#fff1d2',
+                        },
+                        green: {
+                            DEFAULT: '#2e8540',
+                            light: '#4aa564',
+                            lighter: '#94bfa2',
+                            lightest: '#e7f4e4',
+                        },
+                        focus: '#aeb0b5',
+                        visited: '#4c2c92',
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div>
-                <strong>Dynaxiom</strong>
+<body class="bg-gray-50">
+    <header class="fixed w-full top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary-800">
+                    <a href="index.html">Dynaxiom</a>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="solutions.html" class="text-primary-700 hover:text-primary-900 transition-colors">Solutions</a></li>
+                    <li><a href="about.html" class="text-primary-700 hover:text-primary-900 transition-colors">About</a></li>
+                    <li><a href="careers.html" class="text-primary-700 hover:text-primary-900 transition-colors">Careers</a></li>
+                    <li><a href="contact.html" class="text-primary-700 hover:text-primary-900 transition-colors">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Mission-Critical Software Solutions and UAS Technologies</h1>
-                    <p>Dynaxiom combines advanced engineering capabilities with deep federal contracting expertise to solve complex operational challenges for government agencies and defense organizations.</p>
-                    <a href="solutions.html" class="button">Learn More</a>
-                </div>
-                <div class="hero-image">
-                    <img src="images/dji_matrice_lidar.jpg" alt="Advanced UAS Technology" class="fade-in">
-                </div>
-            </div>
-        </section>
-
-        <section class="capabilities">
-            <div class="container">
-                <h2>Our Key Capabilities</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/code.avif" alt="Software Solutions" class="fade-in">
-                        </div>
-                        <h3>Software Solutions</h3>
-                        <p>Custom application development, systems integration, and cybersecurity implementation.</p>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-darkest to-primary text-white">
+            <div class="container mx-auto px-6 py-20">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white">
+                            Mission-Critical Software Solutions and UAS Technologies
+                        </h1>
+                        <p class="text-lg mb-8 text-white opacity-90">
+                            Dynaxiom combines advanced engineering capabilities with deep federal contracting expertise to solve complex operational challenges for government agencies and defense organizations.
+                        </p>
+                        <a href="solutions.html" class="inline-block bg-gold text-primary-darkest px-8 py-3 rounded-lg hover:bg-gold-light transition-colors shadow-lg font-semibold">
+                            Learn More
+                        </a>
                     </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/dji_matrice_lidar.jpg" alt="UAS Technologies" class="fade-in">
-                        </div>
-                        <h3>UAS Technologies</h3>
-                        <p>Platform integration, command and control systems, and operational support for unmanned aerial systems.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="images/planning.avif" alt="Professional Services" class="fade-in">
-                        </div>
-                        <h3>Professional Services</h3>
-                        <p>Technical consulting, program management, and compliance certification services.</p>
+                    <div class="relative">
+                        <img src="images/dji_matrice_lidar.jpg" alt="Advanced UAS Technology" class="rounded-lg shadow-2xl">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="why-choose">
-            <div class="container">
-                <h2>Why Choose Dynaxiom?</h2>
-                <div class="card-container">
-                    <div class="card">
-                        <h3>Security-First Approach</h3>
-                        <p>Full CMMC/NIST compliance for all our solutions</p>
+        <!-- Updated Capabilities Section to match solutions page style -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-primary-darkest text-center mb-12">Our Key Capabilities</h2>
+                
+                <!-- Software Solutions -->
+                <div class="bg-white rounded-lg shadow-lg mb-12 overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/code.avif" alt="Software Solutions" class="w-full h-full object-cover">
                     </div>
-                    <div class="card">
-                        <h3>Rapid Deployment</h3>
-                        <p>Quick implementation with ongoing operational support</p>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold text-primary-darkest mb-6">Software Solutions</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Custom Application Development
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Systems Integration
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Cybersecurity Implementation
+                            </li>
+                        </ul>
                     </div>
-                    <div class="card">
-                        <h3>Federal Expertise</h3>
-                        <p>Proven experience in government contracting requirements</p>
+                </div>
+
+                <!-- UAS Technologies -->
+                <div class="bg-white rounded-lg shadow-lg mb-12 overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/dji_matrice_lidar.jpg" alt="UAS Technologies" class="w-full h-full object-cover">
                     </div>
-                    <div class="card">
-                        <h3>End-to-End Solutions</h3>
-                        <p>Comprehensive software and UAS integration services</p>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold text-primary-darkest mb-6">UAS Technologies</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Platform Integration
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Command and Control Systems
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Operational Support
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Professional Services -->
+                <div class="bg-white rounded-lg shadow-lg mb-12 overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <div class="h-64 overflow-hidden">
+                        <img src="images/planning.avif" alt="Professional Services" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h2 class="text-3xl font-bold text-primary-darkest mb-6">Professional Services</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Technical Consulting
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Program Management
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <span class="text-gold mr-2">•</span>
+                                Compliance Certification
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Partner with Dynaxiom?</h2>
-                    <p>Let's discuss how our mission-critical solutions can address your complex operational challenges.</p>
-                    <div class="cta-button">
-                        <a href="contact.html" class="button">Contact Us</a>
-                    </div>
-                </div>
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-r from-primary-darkest to-primary text-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Partner with Dynaxiom?</h2>
+                <p class="text-xl text-gray-300 mb-8">Let's discuss how our mission-critical solutions can address your complex operational challenges.</p>
+                <a href="contact.html" class="inline-block bg-gold text-primary-darkest px-8 py-3 rounded-lg hover:bg-gold-light transition-colors shadow-lg">
+                    Contact Us
+                </a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Dynaxiom</h3>
-                    <p>Delivering mission-critical solutions for government and defense organizations.</p>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-900 to-primary-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Dynaxiom</h3>
+                    <p class="text-gray-300">Delivering mission-critical solutions for government and defense organizations.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html" class="text-gray-300 hover:text-accent-400 transition-colors">Solutions</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-400 transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-accent-400 transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>1234 Government St, Washington, DC 20006</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Email: info@dynaxiom.com</p>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Contact Us</h3>
+                    <p class="text-gray-300">1234 Government St</p>
+                    <p class="text-gray-300">Washington, DC 20006</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                    <p class="text-gray-300">Email: info@dynaxiom.com</p>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
                 &copy; 2024 Dynaxiom. All rights reserved.
             </div>
         </div>

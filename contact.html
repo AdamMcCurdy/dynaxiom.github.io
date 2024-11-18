@@ -4,62 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Dynaxiom</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div>
-                <strong><a href="index.html">Dynaxiom</a></strong>
+<body class="bg-gray-50">
+    <header class="fixed w-full top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary-800">
+                    <a href="index.html">Dynaxiom</a>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="solutions.html" class="text-primary-700 hover:text-primary-900 transition-colors">Solutions</a></li>
+                    <li><a href="about.html" class="text-primary-700 hover:text-primary-900 transition-colors">About</a></li>
+                    <li><a href="careers.html" class="text-primary-700 hover:text-primary-900 transition-colors">Careers</a></li>
+                    <li><a href="contact.html" class="text-primary-700 hover:text-primary-900 transition-colors">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <p>Get in touch with our team</p>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-900 to-primary-700 text-white">
+            <div class="container mx-auto px-6 py-20">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+                <p class="text-xl text-gray-100">Get in touch with our team</p>
             </div>
         </section>
 
-        <section class="container" style="padding: 60px 0;">
-            <div class="contact-form">
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="button" style="background-color: #000; color: #fff;">Send Message</button>
-                </form>
+        <!-- Contact Form Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl p-8">
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-primary-800 font-medium mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-primary-800 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-primary-800 font-medium mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-primary-800 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="6" required
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition-colors"></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button type="submit" 
+                                class="bg-accent-500 text-white px-8 py-3 rounded-lg hover:bg-accent-600 transition-colors shadow-lg transform hover:-translate-y-0.5">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <!-- Copy footer from index.html -->
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-900 to-primary-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Dynaxiom</h3>
+                    <p class="text-gray-300">Delivering mission-critical solutions for government and defense organizations.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html" class="text-gray-300 hover:text-accent-400 transition-colors">Solutions</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-400 transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-accent-400 transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Contact Us</h3>
+                    <p class="text-gray-300">1234 Government St</p>
+                    <p class="text-gray-300">Washington, DC 20006</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                    <p class="text-gray-300">Email: info@dynaxiom.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                &copy; 2024 Dynaxiom. All rights reserved.
+            </div>
+        </div>
     </footer>
 </body>
 </html> 

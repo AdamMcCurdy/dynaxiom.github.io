@@ -4,84 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Dynaxiom</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div>
-                <strong><a href="index.html">Dynaxiom</a></strong>
+<body class="bg-gray-50">
+    <header class="fixed w-full top-0 bg-white shadow-md z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold text-primary-800">
+                    <a href="index.html">Dynaxiom</a>
+                </div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="solutions.html" class="text-primary-700 hover:text-primary-900 transition-colors">Solutions</a></li>
+                    <li><a href="about.html" class="text-primary-700 hover:text-primary-900 transition-colors">About</a></li>
+                    <li><a href="careers.html" class="text-primary-700 hover:text-primary-900 transition-colors">Careers</a></li>
+                    <li><a href="contact.html" class="text-primary-700 hover:text-primary-900 transition-colors">Contact</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>About Dynaxiom</h1>
-                <p>Leading the way in mission-critical technology solutions</p>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-primary-900 to-primary-700 text-white">
+            <div class="container mx-auto px-6 py-20">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">About Dynaxiom</h1>
+                <p class="text-xl text-gray-100">Leading the way in mission-critical technology solutions</p>
             </div>
         </section>
 
-        <section class="about-content">
-            <div class="container">
-                <h2>Our Story</h2>
-                <p>Founded in 2015, Dynaxiom has been at the forefront of developing innovative solutions for government and defense organizations. Our commitment to excellence and security has made us a trusted partner in the federal sector.</p>
+        <!-- About Content -->
+        <section class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto mb-20">
+                    <h2 class="text-3xl font-bold text-primary-800 mb-6">Our Story</h2>
+                    <p class="text-gray-700 text-lg">Founded in 2015, Dynaxiom has been at the forefront of developing innovative solutions for government and defense organizations. Our commitment to excellence and security has made us a trusted partner in the federal sector.</p>
+                </div>
 
                 <div class="team-section">
-                    <h2>Leadership Team</h2>
-                    <div class="leadership-grid">
-                        <div class="leader-card">
-                            <div class="leader-image">
-                                <img src="images/adam.jpg" alt="James McCurdy">
+                    <h2 class="text-3xl font-bold text-primary-800 text-center mb-12">Leadership Team</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- James McCurdy -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                            <div class="w-48 h-48 mx-auto mt-8 rounded-full overflow-hidden border-4 border-accent-400">
+                                <img src="images/adam.jpg" alt="James McCurdy" class="w-full h-full object-cover">
                             </div>
-                            <div class="leader-info">
-                                <h3>James McCurdy</h3>
-                                <p class="leader-title">Chief Executive Officer</p>
-                                <p class="leader-credentials">Software Developer • U.S. Army Veteran</p>
-                                <p class="leader-bio">Leading Dynaxiom's mission to deliver cutting-edge solutions for defense and government agencies, James brings a unique blend of military experience and technical expertise to drive innovation and excellence.</p>
-                            </div>
-                        </div>
-
-                        <div class="leader-card">
-                            <div class="leader-image">
-                                <img src="images/jeff.jpeg" alt="Jeff Lofvers">
-                            </div>
-                            <div class="leader-info">
-                                <h3>Jeff Lofvers</h3>
-                                <p class="leader-title">Software Engineering Lead</p>
-                                <p class="leader-credentials">Lead Developer • UX Designer</p>
-                                <p class="leader-bio">Spearheading our technical initiatives, Jeff combines deep software engineering knowledge with design thinking to create intuitive and powerful solutions for complex challenges.</p>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-primary-800 mb-2">James McCurdy</h3>
+                                <p class="text-primary-600 font-semibold mb-2">Chief Executive Officer</p>
+                                <p class="text-gray-600 mb-4">Software Developer • U.S. Army Veteran</p>
+                                <p class="text-gray-700">Leading Dynaxiom's mission to deliver cutting-edge solutions for defense and government agencies.</p>
                             </div>
                         </div>
 
-                        <div class="leader-card">
-                            <div class="leader-image">
-                                <img src="images/shannon.jpeg" alt="Shannon Gray">
+                        <!-- Jeff Lofvers -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                            <div class="w-48 h-48 mx-auto mt-8 rounded-full overflow-hidden border-4 border-accent-400">
+                                <img src="images/jeff.jpeg" alt="Jeff Lofvers" class="w-full h-full object-cover">
                             </div>
-                            <div class="leader-info">
-                                <h3>Shannon Gray</h3>
-                                <p class="leader-title">Contract Development Lead</p>
-                                <p class="leader-credentials">Contract Writer • Environmental Scientist</p>
-                                <p class="leader-bio">With expertise in both environmental science and contract development, Shannon ensures our solutions meet rigorous compliance standards while delivering meaningful environmental impact.</p>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-primary-800 mb-2">Jeff Lofvers</h3>
+                                <p class="text-primary-600 font-semibold mb-2">Software Engineering Lead</p>
+                                <p class="text-gray-600 mb-4">Lead Developer • UX Designer</p>
+                                <p class="text-gray-700">Spearheading our technical initiatives with deep software engineering expertise.</p>
                             </div>
                         </div>
 
-                        <div class="leader-card">
-                            <div class="leader-image">
-                                <img src="images/joani.jpeg" alt="Joani Moos">
+                        <!-- Shannon Gray -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                            <div class="w-48 h-48 mx-auto mt-8 rounded-full overflow-hidden border-4 border-accent-400">
+                                <img src="images/shannon.jpeg" alt="Shannon Gray" class="w-full h-full object-cover">
                             </div>
-                            <div class="leader-info">
-                                <h3>Joani Moos</h3>
-                                <p class="leader-title">Operations Lead</p>
-                                <p class="leader-credentials">Project Management • Operations Expert</p>
-                                <p class="leader-bio">Orchestrating our operational excellence, Joani brings strategic project management expertise to ensure seamless delivery and exceptional client satisfaction across all initiatives.</p>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-primary-800 mb-2">Shannon Gray</h3>
+                                <p class="text-primary-600 font-semibold mb-2">Contract Development Lead</p>
+                                <p class="text-gray-600 mb-4">Contract Writer • Environmental Scientist</p>
+                                <p class="text-gray-700">Ensuring our solutions meet rigorous compliance standards.</p>
+                            </div>
+                        </div>
+
+                        <!-- Joani Moos -->
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:-translate-y-1 hover:shadow-xl">
+                            <div class="w-48 h-48 mx-auto mt-8 rounded-full overflow-hidden border-4 border-accent-400">
+                                <img src="images/joani.jpeg" alt="Joani Moos" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-6 text-center">
+                                <h3 class="text-xl font-bold text-primary-800 mb-2">Joani Moos</h3>
+                                <p class="text-primary-600 font-semibold mb-2">Operations Lead</p>
+                                <p class="text-gray-600 mb-4">Project Management • Operations Expert</p>
+                                <p class="text-gray-700">Orchestrating operational excellence across all initiatives.</p>
                             </div>
                         </div>
                     </div>
@@ -90,30 +134,32 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Dynaxiom</h3>
-                    <p>Delivering mission-critical solutions for government and defense organizations.</p>
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-primary-900 to-primary-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Dynaxiom</h3>
+                    <p class="text-gray-300">Delivering mission-critical solutions for government and defense organizations.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="solutions.html">Solutions</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html" class="text-gray-300 hover:text-accent-400 transition-colors">Solutions</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-accent-400 transition-colors">About Us</a></li>
+                        <li><a href="careers.html" class="text-gray-300 hover:text-accent-400 transition-colors">Careers</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>1234 Government St, Washington, DC 20006</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Email: info@dynaxiom.com</p>
+                <div>
+                    <h3 class="text-2xl font-bold text-accent-400 mb-4">Contact Us</h3>
+                    <p class="text-gray-300">1234 Government St</p>
+                    <p class="text-gray-300">Washington, DC 20006</p>
+                    <p class="text-gray-300">Phone: (555) 123-4567</p>
+                    <p class="text-gray-300">Email: info@dynaxiom.com</p>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
                 &copy; 2024 Dynaxiom. All rights reserved.
             </div>
         </div>
