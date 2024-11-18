@@ -39,23 +39,18 @@
             },
         }
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+                })
+        });
+    </script>
 </head>
 <body class="bg-gray-50">
-    <header class="fixed w-full top-0 bg-white shadow-md z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-3xl font-bold text-primary-800">
-                    <a href="/">Dynaxiom</a>
-                </div>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="solutions.html" class="text-primary-700 hover:text-primary-900 transition-colors">Solutions</a></li>
-                    <li><a href="about.html" class="text-primary-700 hover:text-primary-900 transition-colors">About</a></li>
-                    <li><a href="careers.html" class="text-primary-700 hover:text-primary-900 transition-colors">Careers</a></li>
-                    <li><a href="contact.html" class="text-primary-700 hover:text-primary-900 transition-colors">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <div id="nav-placeholder"></div>
 
     <main class="pt-20">
         <!-- Hero Section -->
